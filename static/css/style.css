@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Default styles */
+header {
+  background-color: #0b79bf;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  background-color: #0b79bf;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+  margin: 5px;
+}
+
+.nav__links li a {
+  transition: all 0.5s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: cyan;
+  cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+/* @media (max-width: 768px) {
+    header {
+      flex-direction: inherit;
+      align-items: center;
+      padding: 20px 5%;
+    }
+  
+    .nav__links li {
+      padding: 10px 0;
+    }
+  } */
+
+/* Additional media queries for other screen sizes if needed */
+
+.custom-body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.log-container {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .log-container,
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+  }
+
+  .login-signup-form {
+    width: 100%;
+    padding: 10%;
+  }
+
+  .div-page {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.error-message {
+  color: #ff0000 !important;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.footer-content {
+  position: relative;
+  top: 100%;
+  background-color: #0b79bf;
+}
+
+/* Initial style for the card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for each card */
+.card {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #0b79bf;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Style for the card image */
+.card-image img {
+  max-width: 100%;
+  height: max-content;
+}
+
+/* Style for the card details (initially hidden) */
+.card-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: none; /* Initially hide the description */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+/* Style for the card title */
+.card h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the description paragraph */
+.card .desc {
+  margin: 10px 0;
+}
+
+/* When hovering over the card, display the card details */
+.card:hover .card-details {
+  display: block; /* Display the description on hover */
+}
+
+.card:hover {
+  border-color: transparent; /* Optional: Hide border on hover */
+}
+
+/* Styles for the item image */
+/* CSS Styles */
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align items to the start of the container */
+  padding: 10px; /* Add padding for spacing */
+}
+/* CSS to position the discount indicator image */
+.discount-indicator {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  z-index: 1; /* Ensure it's above other card content */
+  width: 15%;
+  background: transparent;
+}
+
+.out-of-stock {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position for top-left corner */
+  z-index: 1; /* Ensure it's above other card content */
+  background: transparent;
+  width: 15%;
+}
+
+/* styles.css */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+/* Add this CSS to your HTML document or a linked stylesheet */
+table {
+  width: 100%; /* Expand the table to the container's width */
+  border-collapse: collapse; /* Merge cell borders */
+}
+
+th, td {
+  padding: 5px; /* Add padding to cells for spacing */
+  text-align: left; /* Align text to the left within cells */
+}
+
+th {
+  background-color: #f2f2f2; /* Set a background color for table headers */
+}
+
+table img {
+  max-width: 100px; /* Limit the image width to prevent it from stretching the table */
+  max-height: 100px; /* Limit the image height */
+}
+
+/* Optional: Add a scroll bar for the table if it overflows the container */
+.table-container {
+  max-width: 100%; /* Adjust this to limit the container's width */
+  overflow-x: auto;
+}
